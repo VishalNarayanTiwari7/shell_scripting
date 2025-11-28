@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "is it raining (yes/no)" choice 
+if [ "$choice" == "YES" || "$choice" == "yes" ];
+then
+     echo "it is raning"
+else
+    echo"it is not raining"
+fi

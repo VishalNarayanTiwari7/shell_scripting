@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "what do you wish yo do with your service $1:(status/pid)" choice
+function check_status() {
+       echo "Monitoring service status"
+       sudo systemctl status $1
+}
+
+if [[ $choice == "status" ]];
+then 
+    check_status $1
+elif [[ $choice == "pid" ]];
+then 
+    pgrep $1
+else
+      echo "wrong choice"
+fi

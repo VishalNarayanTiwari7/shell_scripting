@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "============== create users========"
+read -p "enter name " username
+read -p "enter password " password
+sudo useradd -m $username 
+echo -e "$password\n$password" |sudo passwd $username
+
+echo "=========user created======="

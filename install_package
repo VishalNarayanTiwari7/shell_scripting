@@ -1,0 +1,5 @@
+#!/bin/bash
+echo " enter what you wann install: $1"
+echo " enter what you wann install: $2"
+echo " enter what you wann install: $@"
+sudo apt-get install $1 -y
